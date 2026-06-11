@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+
 import { useAuthStore } from '@/store/useAuthStore';
 
-export default function OnboardingScreen() {
+export function OnboardingScreen(): React.JSX.Element {
   const { setOnboarded } = useAuthStore();
 
   return (
@@ -17,9 +19,21 @@ export default function OnboardingScreen() {
 }
 
 const s = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, backgroundColor: '#fff' },
-  title:     { fontSize: 28, fontWeight: 'bold', marginBottom: 12, textAlign: 'center', color: '#0369a1' },
-  sub:       { fontSize: 16, color: '#6b7280', marginBottom: 48, textAlign: 'center' },
-  btn:       { backgroundColor: '#0369a1', paddingVertical: 16, paddingHorizontal: 48, borderRadius: 12 },
-  btnTxt:    { color: '#fff', fontSize: 16, fontWeight: '600' },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginBottom: 12,
+    textAlign: 'center',
+    color: '#0369a1',
+  },
+  sub: { fontSize: 16, color: '#6b7280', marginBottom: 48, textAlign: 'center' },
+  btn: { backgroundColor: '#0369a1', paddingVertical: 16, paddingHorizontal: 48, borderRadius: 12 },
+  btnTxt: { color: '#fff', fontSize: 16, fontWeight: '600' },
 });

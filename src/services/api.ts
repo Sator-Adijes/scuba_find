@@ -1,4 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
+
 import { storage, KEYS } from '@/utils/storage';
 
 export const api = axios.create({
@@ -9,7 +10,9 @@ export const api = axios.create({
 
 api.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
   const token = await storage.get<string>(KEYS.ACCESS_TOKEN);
-  if (token) config.headers.Authorization = `Bearer ${token}`;
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
   return config;
 });
 

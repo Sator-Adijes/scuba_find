@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+
 import { useAuthStore } from '@/store/useAuthStore';
 
-export default function HomeScreen() {
+export function HomeScreen(): React.JSX.Element {
   const { user, logout } = useAuthStore();
 
   return (
@@ -17,9 +19,21 @@ export default function HomeScreen() {
 }
 
 const s = StyleSheet.create({
-  container:  { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, backgroundColor: '#fff' },
-  title:      { fontSize: 24, fontWeight: 'bold', marginBottom: 8, color: '#0369a1' },
-  sub:        { fontSize: 16, color: '#6b7280', marginBottom: 48 },
-  logoutBtn:  { borderWidth: 1, borderColor: '#ef4444', padding: 14, borderRadius: 10, paddingHorizontal: 32 },
-  logoutTxt:  { color: '#ef4444', fontWeight: '600' },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+    backgroundColor: '#fff',
+  },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 8, color: '#0369a1' },
+  sub: { fontSize: 16, color: '#6b7280', marginBottom: 48 },
+  logoutBtn: {
+    borderWidth: 1,
+    borderColor: '#ef4444',
+    padding: 14,
+    borderRadius: 10,
+    paddingHorizontal: 32,
+  },
+  logoutTxt: { color: '#ef4444', fontWeight: '600' },
 });

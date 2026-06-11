@@ -21,8 +21,8 @@ export const storage = {
 };
 
 export const KEYS = {
-  ACCESS_TOKEN:  '@auth/accessToken',
+  ACCESS_TOKEN: '@auth/accessToken',
   REFRESH_TOKEN: '@auth/refreshToken',
-  USER:          '@auth/user',
-  ONBOARDED:     '@app/onboarded',
+  USER: '@auth/user',
+  ONBOARDED: '@app/onboarded',
 } as const;
