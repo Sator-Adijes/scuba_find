@@ -9,7 +9,7 @@ import { RootNavigator } from '@/navigation/RootNavigator';
 
 const queryClient = new QueryClient();
 
-export function App(): React.JSX.Element {
+export const App = (): React.JSX.Element => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <QueryClientProvider client={queryClient}>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { View, Text } from 'react-native';
 
-export function HomeScreen(): React.JSX.Element {
+export const HomeScreen = (): React.JSX.Element => {
   return (
     <View className="flex-1 items-center justify-center bg-white px-lg">
       <Text className="text-h4 font-bold text-green-900 mb-xs">Bienvenue sur ScubaFind 🤿</Text>
